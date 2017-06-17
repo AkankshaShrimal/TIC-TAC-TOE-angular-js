@@ -1,0 +1,105 @@
+.grad1 {
+          
+           /*  For Safari 5.1 to 6.0*/ 
+           background: -webkit-linear-gradient(red, yellow);
+           background: -moz-linear-gradient(red, yellow);
+           background: -o-linear-gradient(red, yellow);
+           background: linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */ /* Standard syntax (must be last) */
+           /*opacity: 0.9;*/
+          
+       }
+
+
+#heading {
+  
+  
+                background: -webkit-linear-gradient(red,wheat);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+               -webkit-animation-delay: .2s;
+               -webkit-animation-duration: 3s;
+               text-align :center;
+            
+        }
+ 
+
+
+
+
+
+img {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+    }   
+
+
+.wrapper {
+            width: 50%;
+            /* whatever width you want */
+            display: inline-block;
+            position: relative;
+        
+        }
+        
+.wrapper:after
+             {
+                padding-top: 56.25%;
+                /* 16:9 ratio */
+                display: block;
+                content: '';
+                
+            }
+
+
+.wrapper2 {
+            text-align: center;
+            }
+
+
+.main {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+  
+        }
+
+.home {
+            position: absolute;
+            
+            
+            right: 0;
+            left: 0;
+  
+        }
+
+.center
+        {
+        position: absolute;
+        margin: auto;
+        
+        right: 0;
+        
+        left: 0;
+        
+        
+        }
+.image_page1
+            {
+                -webkit-animation-delay: 1s;
+
+            }
+            
+.button{
+                -webkit-animation-delay: .5s;
+                -webkit-animation-iteration-count: 2;
+
+
+
+
+        }

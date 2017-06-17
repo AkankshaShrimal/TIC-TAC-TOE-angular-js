@@ -1,0 +1,23 @@
+{
+  "name": "TICK_TACK_TO",
+  "homepage": "https://github.com/abhishekrathore/angularsummer2017",
+  "authors": [
+    "AkankshaShrimal <akankshashrimal141997@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "animate.css": "^3.5.2",
+    "bootswatch": "^3.3.7"
+  }
+}

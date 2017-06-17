@@ -1,0 +1,117 @@
+<html>
+    <head>
+        
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/bootswatch/cyborg/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/animate.css/animate.css">
+         <link rel="stylesheet" href="tick_tack.css">
+
+    </head>
+    
+   
+    <body ng-app="tickTack" style="background-color:black" >
+       
+         <div ng-controller="tickCtrl as todo">
+
+             <h1 id="heading" class="animated bounceInLeft" >TICK TACK TOE</h1> 
+
+
+             <div ng-if ="todo.page1 == false">
+
+
+                <button class="btn btn-success "> {{todo.player1_name |uppercase}} : {{todo.player1}}</button> &nbsp;
+                <button class="btn btn-success"> {{todo.player2_name  | uppercase}} : {{todo.player2}} </button><br><br><br>
+
+
+                 <div ng-if ="todo.over">
+                         <h1 id="fab_heading" class="animated infinite pulse " style="color:red; text-align:center; text-shadow:7px 7px black ">GAME OVER
+                         </h1>
+                         <h3 class="animated rollIn" ng-if="todo.result" style="color:white; text-align:center;font-family: cursive; " >WINNER : {{todo.winningPlayer|uppercase}} </h3>
+                         <h3 class="animated rollIn" ng-if="!todo.result" style="color:white; text-align:center;" >  TIE </h3>
+                         <br>
+                        <div class="wrapper2">
+                           <button class=" button btn btn-danger btn-lg animated  bounce" ng-click="todo.home();">HOME</button>
+                           <button class=" button btn btn-danger btn-lg animated  bounce" ng-click="todo.replay();">REPLAY</button>
+                        </div>
+                </div>
+
+                <div class="wrapper center" >
+                    <div class="main">
+                            
+                        <div ng-if="!todo.over"  class ="row animated flipInX" >
+                            
+                                 <div  ng-repeat ="row in todo.divArray" class="col-xs-12  " >
+                                
+                                        <div ng-repeat="col in row"  class="col-xs-4 grad1" style=" border:4px solid black; height: 100px;" ng-click="todo.display(col)">
+                             
+                                             <img ng-if="todo.values[col] == 1" style='height: 80% !important; width: 80% ; object-fit: contain '  src="cross.svg"  > 
+                                             <img ng-if="todo.values[col] == -1" style='height: 60% !important; width: 60% ; object-fit: contain !important;display: block;margin-left: auto; margin-right: auto'  src="zero.png"  > 
+                                        </div>
+                                </div>
+                
+                        </div>
+                     </div>
+                 </div>
+
+           
+                
+                    <div class="home" ng-if="!todo.over">
+                            <button class="button btn btn-info btn-md animated bounce" ng-click="todo.home();">HOME PAGE</button>
+                    </div>
+             </div>
+
+            <div ng-if="todo.page1">
+                    <div class="row" style="height :300px">
+                           
+                            <div class="col-xs-12">
+                                <div class="center" style="height :250px">
+                                        <img  class="animated zoomInLeft image_page1" style='height: 80% !important; width: 80% ; object-fit: contain ' src="image.png">
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col-xs-3"></div>
+
+                        <div class="col-xs-2  grad1" style=" border:4px solid black; height: 130px;">
+                             <img  style='height: 80% !important; width: 80% ; object-fit: contain '  src="cross.svg" >
+                             <h6 style="text-align:center; color:black;">PLAYER 1 :</h6>
+                        </div>
+
+                        <div class="col-xs-2"></div>
+
+                        <div class="col-xs-2  grad1" style=" border:4px solid black; height: 130px;">
+                            <img  style='height: 60% !important; width: 60% ; object-fit: contain !important;display: block;margin-left: auto; margin-right: auto'  src="zero.png"  >
+                             <h6 style="text-align:center; color:black;">PLAYER 2 :</h6>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col-xs-3"></div>
+
+                        <div class="col-xs-2"><input type="text" class="form-control" ng-model="todo.player1_name"></div>
+                        
+                        <div class="col-xs-2"></div>
+
+                        <div class="col-xs-2"><input type="text" class="form-control" ng-model="todo.player2_name"></div>
+                    </div>
+                    <br>
+
+                      
+                      <div class="wrapper2">
+                            <button class="button btn btn-danger btn-md animated bounce" ng-click="todo.begin()">START</button>
+                        </div>
+
+                  
+            </div>        
+             
+        </div>         
+       
+    </body>
+</html>
+        
